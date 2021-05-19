@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javelin - Home</title>
+    <!--Ionic icons CDN-->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Shop</a>
+                    </li>
+                </ul>
+                <div class="shopping-bag">
+                    <i class="ion-back">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                        <span class="bag-item-count">0</span></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="circle circle-small">
+            <img src="images/circle-small.png" alt="">
+        </div>
+        <div class="circle circle-large">
+            <img src="images/circle-large.png" alt="">
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <h1>Lifestyle <br> Smart <span>Watch</span></h1>
+                    <h5>Technologies of the future</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio quasi obcaecati pariatur rem at! Ab corporis delectus cumque temporibus provident.</p>
+                    <a href="#" class="cta">Buy now</a>
+                </div>
+                <div class="watch-wrapper">
+                    <img src="images/watch.png" alt="watch">
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay">
+            <div class="layer layer-1"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-3"></div>
+        </div>
+    </section>
+
+<!--Gsap CDN    -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js"></script>
+<script>
+    gsap.to('.layer-1', { y: '100vh', delay: .5 });
+    gsap.to('.layer-2', { y: '100vh', delay: .7 });
+    gsap.to('.layer-3', { y: '100vh', delay: .9 });
+    gsap.to('.overlay', { y: '100vh', delay: 1.5 });
+
+    gsap.fromTo('.text', 
+        {x: '30rem', opacity: 0}, 
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay: 1.9}
+    );
+
+    gsap.fromTo('.watch-wrapper', 
+        {x: '30rem', opacity: 0}, 
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay: 2.3}
+    );
+
+    gsap.fromTo('.circle-small', 
+        {x: '-30rem', opacity: 0}, 
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay: 1}
+    );
+
+    gsap.fromTo('.circle-large', 
+        {x: '30rem', opacity: 0}, 
+        {x: 0, opacity: 1, ease: 'back.out(1.7)', delay: 1.5}
+    );
+
+</script>
+</body>
+</html>
